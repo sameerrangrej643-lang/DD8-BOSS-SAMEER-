@@ -1,0 +1,3059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>SG-8 PRO — Studio Digital Delay | _its_sameer_95_</title>
+  <style>
+    /* ==========================================================================
+       1. LUXURY STUDIO HARDWARE THEMES (Default: Pearl White & Satin Platinum)
+       ========================================================================== */
+    :root {
+      /* Default: Pearl White & Satin Platinum Studio Edition */
+      --bg-app: #e4e9f0;
+      --shell-bg: linear-gradient(165deg, #ffffff 0%, #f5f7fa 50%, #e9eef5 100%);
+      --chassis-gradient: linear-gradient(155deg, #ffffff 0%, #f8fafc 45%, #edf2f7 100%);
+      --chassis-border: #cbd5e1;
+      --plate-bg: linear-gradient(180deg, #ffffff 0%, #f4f7fb 55%, #e5ebf3 100%);
+      --plate-text: #0f172a;
+      --plate-subtext: #b45309;
+      --nav-bg: #f8fafc;
+      --nav-btn-bg: linear-gradient(180deg, #ffffff 0%, #eef2f6 100%);
+      --nav-btn-border: #d5dde7;
+      --nav-btn-text: #1e293b;
+      --nav-btn-active: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      --nav-btn-active-text: #ffffff;
+      --knob-body: radial-gradient(circle at 32% 28%, #ffffff 0%, #e2e8f0 58%, #cbd5e1 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #ffffff 0%, #f1f5f9 65%, #e2e8f0 100%);
+      --knob-pointer: #d97706;
+      --arc-color: #d97706;
+      --oled-bg: #070b12;
+      --oled-line: #38bdf8;
+      --oled-echo: #fbbf24;
+      --amber-glow: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+      --amber-border: #fde68a;
+      --text-panel: #0f172a;
+      --text-muted: #475569;
+    }
+
+    [data-theme="carbon"] {
+      --bg-app: #090b0f;
+      --shell-bg: #12161f;
+      --chassis-gradient: linear-gradient(160deg, #1b222e 0%, #10141c 55%, #0c0f15 100%);
+      --chassis-border: #2f3a4d;
+      --plate-bg: linear-gradient(180deg, #1c2330 0%, #141923 65%, #0e1219 100%);
+      --plate-text: #f8fafc;
+      --plate-subtext: #d4af37;
+      --nav-bg: #131822;
+      --nav-btn-bg: linear-gradient(180deg, #1f2736 0%, #151b26 100%);
+      --nav-btn-border: #2d384b;
+      --nav-btn-text: #cbd5e1;
+      --nav-btn-active: linear-gradient(180deg, #f59e0b 0%, #d97706 100%);
+      --nav-btn-active-text: #090b0f;
+      --knob-body: radial-gradient(circle at 32% 28%, #475569 0%, #1e293b 60%, #0f172a 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #334155 0%, #0f172a 100%);
+      --knob-pointer: #fbbf24;
+      --arc-color: #fbbf24;
+      --oled-bg: #06090e;
+      --oled-line: #38bdf8;
+      --oled-echo: #fbbf24;
+      --text-panel: #e2e8f0;
+      --text-muted: #94a3b8;
+    }
+
+    [data-theme="titanium"] {
+      --bg-app: #d8e0ea;
+      --shell-bg: #eef2f6;
+      --chassis-gradient: linear-gradient(165deg, #f8fafc 0%, #e2e8f0 100%);
+      --chassis-border: #94a3b8;
+      --plate-bg: linear-gradient(180deg, #ffffff 0%, #e2e8f0 65%, #cbd5e1 100%);
+      --plate-text: #0f172a;
+      --plate-subtext: #1d4ed8;
+      --nav-bg: #e2e8f0;
+      --nav-btn-bg: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      --nav-btn-border: #cbd5e1;
+      --nav-btn-text: #1e293b;
+      --nav-btn-active: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      --nav-btn-active-text: #ffffff;
+      --knob-body: radial-gradient(circle at 35% 30%, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #f8fafc 0%, #cbd5e1 100%);
+      --knob-pointer: #1d4ed8;
+      --arc-color: #2563eb;
+      --oled-bg: #050a14;
+      --oled-line: #60a5fa;
+      --oled-echo: #34d399;
+      --text-panel: #0f172a;
+      --text-muted: #475569;
+    }
+
+    [data-theme="cream"] {
+      --bg-app: #ede4d3;
+      --shell-bg: #fbf6ec;
+      --chassis-gradient: linear-gradient(165deg, #fffdf8 0%, #f3e8d2 100%);
+      --chassis-border: #cbb694;
+      --plate-bg: linear-gradient(180deg, #fffdf9 0%, #f1e3c8 65%, #e2cfa9 100%);
+      --plate-text: #2e1f14;
+      --plate-subtext: #b45309;
+      --nav-bg: #f8f0e0;
+      --nav-btn-bg: linear-gradient(180deg, #ffffff 0%, #ede0c9 100%);
+      --nav-btn-border: #d4c1a1;
+      --nav-btn-text: #3d2c1e;
+      --nav-btn-active: linear-gradient(180deg, #b45309 0%, #92400e 100%);
+      --nav-btn-active-text: #fffbeb;
+      --knob-body: radial-gradient(circle at 35% 30%, #ffffff 0%, #ead9bc 60%, #cbb48f 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #fffdf8 0%, #e5d2b0 100%);
+      --knob-pointer: #92400e;
+      --arc-color: #d97706;
+      --oled-bg: #120d08;
+      --oled-line: #fbbf24;
+      --oled-echo: #fb7185;
+      --text-panel: #2e1f14;
+      --text-muted: #6b533b;
+    }
+
+    [data-theme="titanium"] {
+      --bg-app: #0f131a;
+      --shell-bg: #e2e8f0;
+      --chassis-gradient: linear-gradient(165deg, #252e3d 0%, #171d26 100%);
+      --chassis-border: #475569;
+      --plate-bg: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 65%, #cbd5e1 100%);
+      --plate-text: #0f172a;
+      --plate-subtext: #2563eb;
+      --nav-bg: #e2e8f0;
+      --nav-btn-bg: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      --nav-btn-border: #cbd5e1;
+      --nav-btn-text: #1e293b;
+      --nav-btn-active: linear-gradient(180deg, #2563eb 0%, #1d4ed8 100%);
+      --nav-btn-active-text: #ffffff;
+      --knob-body: radial-gradient(circle at 35% 30%, #ffffff 0%, #cbd5e1 60%, #94a3b8 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #f8fafc 0%, #cbd5e1 100%);
+      --knob-pointer: #1d4ed8;
+      --arc-color: #38bdf8;
+      --oled-bg: #050a14;
+      --oled-line: #60a5fa;
+      --oled-echo: #34d399;
+    }
+
+    [data-theme="cyber"] {
+      --bg-app: #060a09;
+      --shell-bg: #0d1412;
+      --chassis-gradient: linear-gradient(165deg, #14211d 0%, #0b1210 100%);
+      --chassis-border: #1f3b33;
+      --plate-bg: linear-gradient(180deg, #13201c 0%, #0c1412 100%);
+      --plate-text: #ecfdf5;
+      --plate-subtext: #10b981;
+      --nav-bg: #0d1412;
+      --nav-btn-bg: linear-gradient(180deg, #162621 0%, #0f1a16 100%);
+      --nav-btn-border: #234037;
+      --nav-btn-text: #a7f3d0;
+      --nav-btn-active: linear-gradient(180deg, #10b981 0%, #059669 100%);
+      --nav-btn-active-text: #04100c;
+      --knob-body: radial-gradient(circle at 32% 28%, #2a423b 0%, #13221e 65%, #09120f 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #1f362f 0%, #0b1411 100%);
+      --knob-pointer: #34d399;
+      --arc-color: #10b981;
+      --oled-bg: #030806;
+      --oled-line: #10b981;
+      --oled-echo: #a3e635;
+    }
+
+    [data-theme="cream"] {
+      --bg-app: #1a1510;
+      --shell-bg: #f5ebd6;
+      --chassis-gradient: linear-gradient(165deg, #2e241b 0%, #1d1610 100%);
+      --chassis-border: #574331;
+      --plate-bg: linear-gradient(180deg, #fcf6e8 0%, #eedfc2 65%, #dec8a2 100%);
+      --plate-text: #2e1f14;
+      --plate-subtext: #b45309;
+      --nav-bg: #f5ebd6;
+      --nav-btn-bg: linear-gradient(180deg, #fffdf7 0%, #eadbc0 100%);
+      --nav-btn-border: #cbb694;
+      --nav-btn-text: #3d2c1e;
+      --nav-btn-active: linear-gradient(180deg, #b45309 0%, #92400e 100%);
+      --nav-btn-active-text: #fffbeb;
+      --knob-body: radial-gradient(circle at 35% 30%, #fffbeb 0%, #e7d5b8 60%, #c4ae8a 100%);
+      --knob-cap: radial-gradient(circle at 30% 30%, #fef9ec 0%, #dec9a6 100%);
+      --knob-pointer: #92400e;
+      --arc-color: #f59e0b;
+      --oled-bg: #120d08;
+      --oled-line: #fbbf24;
+      --oled-echo: #fb7185;
+    }
+
+    /* ==========================================================================
+       2. RESET & MOBILE-FIRST RESPONSIVE SHELL
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: radial-gradient(circle at 50% 0%, #f8fafc 0%, var(--bg-app) 100%);
+      color: var(--text-panel);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 6px;
+      overflow-x: hidden;
+    }
+
+    /* Signature Top Hardware Bezel Strip */
+    .brand-bezel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px 4px;
+      background: var(--nav-bg);
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      color: var(--text-muted);
+    }
+
+    .brand-pill {
+      background: rgba(180, 83, 9, 0.1);
+      border: 1px solid rgba(180, 83, 9, 0.35);
+      color: #b45309;
+      padding: 2px 9px;
+      border-radius: 999px;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    [data-theme="carbon"] .brand-pill {
+      color: #fbbf24;
+      background: rgba(245, 158, 11, 0.14);
+      border-color: rgba(245, 158, 11, 0.4);
+    }
+
+    .app-shell {
+      width: 100%;
+      max-width: 440px;
+      background: var(--shell-bg);
+      border-radius: 26px;
+      box-shadow: 0 25px 65px rgba(0, 0, 0, 0.75), 0 0 0 1.5px rgba(255, 255, 255, 0.08);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: background 0.25s ease;
+    }
+
+    /* Signature Top Hardware Bezel Strip */
+    .brand-bezel {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 14px 4px;
+      background: var(--nav-bg);
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: 1.4px;
+      color: var(--text-muted);
+    }
+
+    .brand-pill {
+      background: rgba(245, 158, 11, 0.14);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      color: #fbbf24;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    [data-theme="titanium"] .brand-pill,
+    [data-theme="cream"] .brand-pill {
+      color: #1e293b;
+      background: rgba(15, 23, 42, 0.08);
+      border-color: rgba(15, 23, 42, 0.25);
+    }
+
+    /* ==========================================================================
+       3. TOP 5-TAB NAVIGATION BAR
+       ========================================================================== */
+    .top-nav {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 5px;
+      padding: 6px 10px 8px;
+      background: var(--nav-bg);
+    }
+
+    .nav-btn {
+      background: var(--nav-btn-bg);
+      border: 1.5px solid var(--nav-btn-border);
+      border-radius: 12px;
+      padding: 7px 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      cursor: pointer;
+      color: var(--nav-btn-text);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+      transition: transform 0.1s ease, all 0.2s ease;
+    }
+
+    .nav-btn:active {
+      transform: scale(0.95);
+    }
+
+    .nav-btn.active {
+      background: var(--nav-btn-active);
+      color: var(--nav-btn-active-text);
+      border-color: transparent;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+    }
+
+    .nav-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    .nav-btn span {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      white-space: nowrap;
+    }
+
+    /* ==========================================================================
+       4. STUDIO RECORDER & MIC CONTROL DECK
+       ========================================================================== */
+    .recorder-bar {
+      margin: 0 10px 8px;
+      padding: 7px 9px;
+      background: linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+      border-radius: 14px;
+      border: 1.5px solid #d5dde7;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 5px;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.95), 0 2px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    [data-theme="carbon"] .recorder-bar {
+      background: #0d1118;
+      border-color: #283244;
+    }
+
+    .rec-status-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-action {
+      border: none;
+      border-radius: 9px;
+      padding: 6px 9px;
+      font-size: 10.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-action:active {
+      transform: scale(0.96);
+    }
+
+    .btn-mic {
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      color: #0f172a;
+      border: 1px solid #cbd5e1;
+      box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+    }
+
+    [data-theme="carbon"] .btn-mic {
+      background: linear-gradient(180deg, #273244 0%, #18202c 100%);
+      color: #f8fafc;
+      border-color: #3e4c63;
+    }
+
+    .btn-mic.live {
+      background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border-color: #6ee7b7;
+      box-shadow: 0 0 12px rgba(16, 185, 129, 0.45);
+    }
+
+    .btn-rec {
+      background: linear-gradient(180deg, #ef4444 0%, #dc2626 100%);
+      color: #ffffff;
+      border: 1px solid #fca5a5;
+    }
+
+    .btn-rec.recording {
+      animation: pulseRec 1.05s infinite;
+      box-shadow: 0 0 14px rgba(239, 68, 68, 0.75);
+    }
+
+    @keyframes pulseRec {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    .rec-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    .rec-timer {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11.5px;
+      font-weight: 900;
+      color: var(--text-panel);
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .btn-save {
+      background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+      color: #0f172a;
+      border: 1px solid #fcd34d;
+      box-shadow: 0 2px 5px rgba(245, 158, 11, 0.25);
+    }
+
+    .btn-save:disabled {
+      opacity: 0.42;
+      cursor: not-allowed;
+    }
+
+    /* ==========================================================================
+       5. MACHINED PEARL-WHITE CHASSIS + LIVE OLED VISUALIZER
+       ========================================================================== */
+    .pedal-chassis {
+      margin: 0 10px;
+      background: var(--chassis-gradient);
+      border-radius: 22px 22px 12px 12px;
+      border: 2px solid var(--chassis-border);
+      padding: 11px 12px 13px;
+      box-shadow:
+        inset 0 2px 3px rgba(255, 255, 255, 0.95),
+        inset 0 -4px 10px rgba(148, 163, 184, 0.22),
+        0 8px 20px rgba(15, 23, 42, 0.08);
+      position: relative;
+    }
+
+    [data-theme="carbon"] .pedal-chassis {
+      box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.14),
+        inset 0 -5px 12px rgba(0, 0, 0, 0.65),
+        0 8px 20px rgba(0, 0, 0, 0.45);
+    }
+
+    /* Corner Machined Brushed Chrome Hex Screws */
+    .hex-screw {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ffffff 0%, #cbd5e1 65%, #64748b 100%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9), 0 1px 2px rgba(15, 23, 42, 0.3);
+      pointer-events: none;
+    }
+    .hex-screw::after {
+      content: "";
+      position: absolute;
+      inset: 2.8px;
+      border-radius: 50%;
+      background: #475569;
+    }
+
+    .rec-status-group {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .btn-action {
+      border: none;
+      border-radius: 9px;
+      padding: 6px 9px;
+      font-size: 10.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: all 0.15s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .btn-action:active {
+      transform: scale(0.96);
+    }
+
+    .btn-mic {
+      background: linear-gradient(180deg, #273244 0%, #18202c 100%);
+      color: #f8fafc;
+      border: 1px solid #3e4c63;
+    }
+
+    .btn-mic.live {
+      background: linear-gradient(180deg, #10b981 0%, #059669 100%);
+      color: #ffffff;
+      border-color: #6ee7b7;
+      box-shadow: 0 0 14px rgba(16, 185, 129, 0.55);
+    }
+
+    .btn-rec {
+      background: linear-gradient(180deg, #ef4444 0%, #b91c1c 100%);
+      color: #ffffff;
+      border: 1px solid #fca5a5;
+    }
+
+    .btn-rec.recording {
+      animation: pulseRec 1.05s infinite;
+      box-shadow: 0 0 16px rgba(239, 68, 68, 0.85);
+    }
+
+    @keyframes pulseRec {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    .rec-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #ffffff;
+    }
+
+    .rec-timer {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #e2e8f0;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .btn-save {
+      background: linear-gradient(180deg, #fbbf24 0%, #d97706 100%);
+      color: #090b0f;
+      border: 1px solid #fef08a;
+    }
+
+    .btn-save:disabled {
+      opacity: 0.38;
+      cursor: not-allowed;
+    }
+
+    /* ==========================================================================
+       5. MACHINED CHASSIS + LIVE OLED WAVEFORM & ECHO VISUALIZER
+       ========================================================================== */
+    .pedal-chassis {
+      margin: 0 10px;
+      background: var(--chassis-gradient);
+      border-radius: 20px 20px 10px 10px;
+      border: 2px solid var(--chassis-border);
+      padding: 11px 12px 13px;
+      box-shadow:
+        inset 0 1px 2px rgba(255, 255, 255, 0.14),
+        inset 0 -5px 12px rgba(0, 0, 0, 0.65),
+        0 8px 20px rgba(0, 0, 0, 0.45);
+      position: relative;
+    }
+
+    /* Corner Machined Hex Screws for Authentic Boutique Hardware Look */
+    .hex-screw {
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #94a3b8 0%, #334155 75%, #0f172a 100%);
+      box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 1px 2px rgba(0, 0, 0, 0.8);
+      pointer-events: none;
+    }
+    .hex-screw::after {
+      content: "";
+      position: absolute;
+      inset: 2.5px;
+      border-radius: 50%;
+      background: #0f172a;
+    }
+    .screw-tl { top: 7px; left: 7px; }
+    .screw-tr { top: 7px; right: 7px; }
+
+    /* Top Meters & CHECK LED Row */
+    .meter-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2px 12px 9px;
+    }
+
+    .meter-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .meter-label {
+      font-size: 9.5px;
+      font-weight: 900;
+      color: var(--text-muted);
+      letter-spacing: 0.9px;
+    }
+
+    .led-strip {
+      display: flex;
+      gap: 2.5px;
+      background: #0f172a;
+      padding: 3px 4px;
+      border-radius: 5px;
+      border: 1px solid #94a3b8;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.6);
+    }
+
+    .led-seg {
+      width: 3.8px;
+      height: 10px;
+      border-radius: 1px;
+      background: #1e293b;
+      transition: background 0.05s ease, box-shadow 0.05s ease;
+    }
+
+    .led-seg.on-green { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+    .led-seg.on-yellow { background: #eab308; box-shadow: 0 0 6px #eab308; }
+    .led-seg.on-red { background: #ef4444; box-shadow: 0 0 6px #ef4444; }
+
+    .check-indicator {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .check-led {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #991b1b 0%, #450a0a 100%);
+      border: 2px solid #cbd5e1;
+      box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+      transition: all 0.15s ease;
+    }
+
+    .check-led.active {
+      background: radial-gradient(circle at 35% 35%, #ff8a80 0%, #ff1744 55%, #b71c1c 100%);
+      box-shadow: 0 0 10px #ff1744, 0 0 18px rgba(255, 23, 68, 0.55);
+    }
+
+    .check-text {
+      font-size: 10.5px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      color: var(--text-panel);
+    }
+
+    /* HIGH-CONTRAST OBSIDIAN OLED SCREEN INSIDE PEARL-WHITE BEZEL */
+    .oled-screen-bezel {
+      background: var(--oled-bg);
+      border: 2px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 5px 7px;
+      margin-bottom: 10px;
+      box-shadow:
+        inset 0 2px 8px rgba(0, 0, 0, 0.95),
+        0 2px 6px rgba(15, 23, 42, 0.12),
+        0 0 0 1px rgba(15, 23, 42, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .oled-top-hud {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 9.5px;
+      font-weight: 800;
+      color: var(--oled-line);
+      margin-bottom: 2px;
+      letter-spacing: 0.5px;
+    }
+
+    .oled-top-hud .hud-right {
+      color: var(--oled-echo);
+    }
+
+    #oledCanvas {
+      width: 100%;
+      height: 44px;
+      display: block;
+      border-radius: 6px;
+    }
+
+    /* ==========================================================================
+       6. LED-RING ROTARY KNOBS ROW (E.LEVEL, F.BACK, D.TIME)
+       ========================================================================== */
+    .knobs-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      text-align: center;
+    }
+
+    .knob-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+
+    .knob-title {
+      font-size: 10.5px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: var(--text-panel);
+      margin-bottom: 4px;
+    }
+
+    .knob-dial-wrap {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .knob-ticks {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .knob-cap {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--knob-body);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      box-shadow:
+        0 5px 11px rgba(15, 23, 42, 0.22),
+        0 2px 4px rgba(15, 23, 42, 0.12),
+        inset 0 2px 3px rgba(255, 255, 255, 0.95),
+        inset 0 -2px 4px rgba(148, 163, 184, 0.35);
+      position: relative;
+      cursor: ns-resize;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    [data-theme="carbon"] .knob-cap {
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.7),
+        inset 0 1.5px 2.5px rgba(255, 255, 255, 0.45),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.45);
+    }
+
+    .knob-cap::after {
+      content: "";
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--knob-cap);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.9), 0 1px 2px rgba(15, 23, 42, 0.15);
+    }
+
+    .knob-pointer {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      width: 3.5px;
+      height: 14px;
+      background: var(--knob-pointer);
+      border-radius: 2px;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 4px rgba(217, 119, 6, 0.5);
+    }
+
+    .knob-val {
+      margin-top: 3px;
+      font-size: 11.5px;
+      font-weight: 900;
+      color: var(--text-panel);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ==========================================================================
+       7. MIDDLE SECTION: TAP + 6-MODE SELECTOR + HOLD
+       ========================================================================== */
+    .mode-section {
+      display: grid;
+      grid-template-columns: 62px 1fr 62px;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .stomp-mini-btn {
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      border: 1.5px solid #cbd5e1;
+      border-radius: 11px;
+      color: #0f172a;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      padding: 11px 4px;
+      cursor: pointer;
+      box-shadow: 0 3px 7px rgba(15, 23, 42, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+      transition: transform 0.08s ease, all 0.15s ease;
+    }
+
+    [data-theme="carbon"] .stomp-mini-btn {
+      background: linear-gradient(180deg, #273142 0%, #151b24 100%);
+      border-color: #415066;
+      color: #f1f5f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+    }
+
+    .stomp-mini-btn:active {
+      transform: translateY(2px) scale(0.97);
+      border-color: #d97706;
+    }
+
+    .stomp-mini-btn.hold-active {
+      background: linear-gradient(180deg, #fbbf24 0%, #f59e0b 100%);
+      color: #0f172a;
+      border-color: #d97706;
+      box-shadow: 0 0 14px rgba(245, 158, 11, 0.55);
+    }
+
+    .mode-dial-container {
+      position: relative;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mode-label {
+      position: absolute;
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--text-muted);
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .mode-label.active-mode {
+      color: #ffffff;
+      background: #0f172a;
+      box-shadow: 0 2px 8px rgba(15, 23, 42, 0.3);
+    }
+
+    [data-theme="carbon"] .mode-label.active-mode {
+      color: #090b0f;
+      background: #fbbf24;
+    }
+
+    .m-lbl-0 { bottom: 3px; left: 12px; }
+    .m-lbl-1 { top: 41px; left: -2px; }
+    .m-lbl-2 { top: 2px; left: 30px; }
+    .m-lbl-3 { top: 2px; right: 22px; }
+    .m-lbl-4 { top: 41px; right: -4px; }
+    .m-lbl-5 { bottom: 3px; right: 6px; }
+
+    .mode-knob-cap {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--knob-body);
+      border: 1px solid rgba(148, 163, 184, 0.55);
+      box-shadow:
+        0 6px 13px rgba(15, 23, 42, 0.22),
+        inset 0 2px 3px rgba(255, 255, 255, 0.95);
+      position: relative;
+      cursor: ns-resize;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    [data-theme="carbon"] .mode-knob-cap {
+      border-color: rgba(255, 255, 255, 0.12);
+      box-shadow:
+        0 7px 14px rgba(0, 0, 0, 0.75),
+        inset 0 2px 3px rgba(255, 255, 255, 0.45);
+    }
+
+    .mode-knob-cap::after {
+      content: "";
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--knob-cap);
+    }
+
+    .digital-readout {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.6px;
+      color: var(--text-panel);
+      margin: 2px 0 9px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .digital-readout span.sub-readout {
+      color: var(--text-muted);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       8. PING-PONG STEREO BAR & FX TOGGLE BUTTON
+       ========================================================================== */
+    .stereo-fx-row {
+      display: grid;
+      grid-template-columns: 1fr 66px;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .pingpong-pill {
+      background: var(--amber-glow);
+      border: 1.5px solid #f59e0b;
+      border-radius: 12px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.8);
+      transition: all 0.2s ease;
+    }
+
+    .pingpong-pill.off {
+      background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+      border-color: #cbd5e1;
+      box-shadow: none;
+    }
+
+    [data-theme="carbon"] .pingpong-pill.off {
+      background: linear-gradient(180deg, #273142 0%, #161c26 100%);
+      border-color: #3f4d63;
+    }
+
+    .knob-dial-wrap {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .knob-ticks {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .knob-cap {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--knob-body);
+      box-shadow:
+        0 6px 12px rgba(0, 0, 0, 0.7),
+        inset 0 1.5px 2.5px rgba(255, 255, 255, 0.45),
+        inset 0 -3px 6px rgba(0, 0, 0, 0.45);
+      position: relative;
+      cursor: ns-resize;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .knob-cap::after {
+      content: "";
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--knob-cap);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.25), 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    .knob-pointer {
+      position: absolute;
+      top: 4px;
+      left: 50%;
+      width: 3.5px;
+      height: 14px;
+      background: var(--knob-pointer);
+      border-radius: 2px;
+      transform: translateX(-50%);
+      z-index: 2;
+      box-shadow: 0 0 6px var(--knob-pointer);
+    }
+
+    .knob-val {
+      margin-top: 3px;
+      font-size: 11.5px;
+      font-weight: 800;
+      color: #f8fafc;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ==========================================================================
+       7. MIDDLE SECTION: TAP + 6-MODE SELECTOR + HOLD
+       ========================================================================== */
+    .mode-section {
+      display: grid;
+      grid-template-columns: 62px 1fr 62px;
+      align-items: center;
+      gap: 4px;
+      margin-top: 6px;
+    }
+
+    .stomp-mini-btn {
+      background: linear-gradient(180deg, #273142 0%, #151b24 100%);
+      border: 1.5px solid #415066;
+      border-radius: 10px;
+      color: #f1f5f9;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      padding: 11px 4px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.15);
+      transition: transform 0.08s ease, all 0.15s ease;
+    }
+
+    .stomp-mini-btn:active {
+      transform: translateY(2px) scale(0.97);
+      border-color: #fbbf24;
+    }
+
+    .stomp-mini-btn.hold-active {
+      background: linear-gradient(180deg, #fbbf24 0%, #b45309 100%);
+      color: #090b0f;
+      border-color: #fef08a;
+      box-shadow: 0 0 16px rgba(251, 191, 36, 0.8);
+    }
+
+    .mode-dial-container {
+      position: relative;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mode-label {
+      position: absolute;
+      font-size: 9px;
+      font-weight: 800;
+      color: #94a3b8;
+      letter-spacing: 0.3px;
+      cursor: pointer;
+      padding: 2px 5px;
+      border-radius: 5px;
+      transition: all 0.15s ease;
+    }
+
+    .mode-label.active-mode {
+      color: #090b0f;
+      background: #fbbf24;
+      box-shadow: 0 0 10px rgba(251, 191, 36, 0.6);
+    }
+
+    .m-lbl-0 { bottom: 3px; left: 12px; }
+    .m-lbl-1 { top: 41px; left: -2px; }
+    .m-lbl-2 { top: 2px; left: 30px; }
+    .m-lbl-3 { top: 2px; right: 22px; }
+    .m-lbl-4 { top: 41px; right: -4px; }
+    .m-lbl-5 { bottom: 3px; right: 6px; }
+
+    .mode-knob-cap {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      background: var(--knob-body);
+      box-shadow:
+        0 7px 14px rgba(0, 0, 0, 0.75),
+        inset 0 2px 3px rgba(255, 255, 255, 0.45);
+      position: relative;
+      cursor: ns-resize;
+      touch-action: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .mode-knob-cap::after {
+      content: "";
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--knob-cap);
+    }
+
+    .digital-readout {
+      text-align: center;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      color: #f8fafc;
+      margin: 2px 0 9px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .digital-readout span.sub-readout {
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       8. PING-PONG STEREO BAR & FX TOGGLE BUTTON
+       ========================================================================== */
+    .stereo-fx-row {
+      display: grid;
+      grid-template-columns: 1fr 66px;
+      gap: 8px;
+      align-items: stretch;
+    }
+
+    .pingpong-pill {
+      background: var(--amber-glow);
+      border: 2px solid var(--amber-border);
+      border-radius: 12px;
+      padding: 6px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      box-shadow: 0 0 18px rgba(245, 158, 11, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.65);
+      transition: all 0.2s ease;
+    }
+
+    .pingpong-pill.off {
+      background: linear-gradient(180deg, #273142 0%, #161c26 100%);
+      border-color: #3f4d63;
+      box-shadow: none;
+    }
+
+    .pan-control {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex: 1;
+    }
+
+    .pan-badge {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1.5px solid #0f172a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 900;
+      color: #0f172a;
+    }
+
+    .pingpong-pill.off .pan-badge {
+      border-color: #94a3b8;
+      color: #94a3b8;
+    }
+
+    .pan-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 3.5px;
+      background: #0f172a;
+      border-radius: 2px;
+      outline: none;
+    }
+
+    .pingpong-pill.off .pan-slider { background: #64748b; }
+
+    .pan-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #0f172a;
+      cursor: pointer;
+      border: 2px solid #fef3c7;
+    }
+
+    .pp-toggle-btn {
+      background: transparent;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      color: #0f172a;
+      line-height: 1.1;
+      padding: 2px 4px;
+    }
+
+    .pingpong-pill.off .pp-toggle-btn { color: var(--text-muted); }
+
+    .pp-toggle-btn .pp-title {
+      display: block;
+      font-size: 9.5px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+    }
+
+    .pp-toggle-btn .pp-state {
+      display: block;
+      font-size: 10px;
+      font-weight: 900;
+    }
+
+    .fx-btn {
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      border: 1.5px solid #cbd5e1;
+      border-radius: 12px;
+      color: #0f172a;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      position: relative;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 3px 7px rgba(15, 23, 42, 0.1), inset 0 1px 1px rgba(255, 255, 255, 0.95);
+    }
+
+    [data-theme="carbon"] .fx-btn {
+      background: linear-gradient(180deg, #242d3d 0%, #141922 100%);
+      border-color: #415066;
+      color: #f8fafc;
+    }
+
+    .fx-dot {
+      position: absolute;
+      top: 6px;
+      right: 6px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #94a3b8;
+      transition: all 0.2s ease;
+    }
+
+    .fx-btn.active { border-color: #f59e0b; }
+    .fx-btn.active .fx-dot { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; }
+
+    /* ==========================================================================
+       9. PEARL-WHITE FOOTSWITCH PLATE (SG-8 PRO // _its_sameer_95_)
+       ========================================================================== */
+    .footswitch-plate {
+      margin: 6px 10px 10px;
+      background: var(--plate-bg);
+      border: 1.5px solid var(--chassis-border);
+      border-radius: 14px 14px 24px 24px;
+      padding: 12px 15px 18px;
+      position: relative;
+      box-shadow:
+        0 8px 18px rgba(15, 23, 42, 0.1),
+        inset 0 2px 3px rgba(255, 255, 255, 0.95),
+        inset 0 -3px 8px rgba(148, 163, 184, 0.2);
+      cursor: pointer;
+      transition: transform 0.08s ease;
+      text-align: center;
+    }
+
+    [data-theme="carbon"] .footswitch-plate {
+      box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.45),
+        inset 0 1px 2px rgba(255, 255, 255, 0.15);
+    }
+
+    .footswitch-plate:active {
+      transform: translateY(2px) scale(0.992);
+    }
+
+    .plate-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    /* Custom SG-8 Emblem Badge */
+    .sg-emblem {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 10px;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      border: 1px solid #334155;
+      color: #fbbf24;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 5px rgba(15, 23, 42, 0.18);
+    }
+
+    .sg-emblem-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 8px #38bdf8;
+    }
+
+    .lock-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+      border: 1.5px solid #cbd5e1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+      color: #0f172a;
+      z-index: 5;
+    }
+
+    .lock-btn.locked {
+      background: linear-gradient(180deg, #fee2e2 0%, #fecaca 100%);
+      border-color: #ef4444;
+      color: #b91c1c;
+    }
+
+    .lock-btn svg { width: 12px; height: 12px; fill: currentColor; }
+    .lock-btn span { font-size: 7.5px; font-weight: 900; margin-top: 1px; }
+
+    .pedal-brand-title {
+      font-size: 29px;
+      font-weight: 900;
+      letter-spacing: -0.6px;
+      color: var(--plate-text);
+      line-height: 1.05;
+      margin-top: 2px;
+    }
+
+    .pedal-brand-sub {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 2.2px;
+      text-transform: uppercase;
+      color: var(--plate-subtext);
+      margin-top: 3px;
+    }
+
+    .pedal-dev-credit {
+      display: inline-block;
+      margin-top: 7px;
+      padding: 3px 11px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.06);
+      border: 1px solid rgba(15, 23, 42, 0.15);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1.3px;
+      color: var(--plate-text);
+    }
+
+    [data-theme="carbon"] .pedal-dev-credit {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.16);
+    }
+
+    .pedal-tap-hint {
+      margin-top: 7px;
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.9;
+    }
+
+    [data-theme="titanium"] .pedal-dev-credit,
+    [data-theme="cream"] .pedal-dev-credit {
+      background: rgba(15, 23, 42, 0.08);
+      border-color: rgba(15, 23, 42, 0.18);
+    }
+
+    .pedal-tap-hint {
+      margin-top: 7px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      opacity: 0.85;
+    }
+
+    /* ==========================================================================
+       10. DRAWERS (File Echo, Presets, Theme, Settings) & CLIP PREVIEW
+       ========================================================================== */
+    .drawer-panel {
+      display: none;
+      margin: 0 10px 8px;
+      background: #141a24;
+      border: 1.5px solid #2e3a4e;
+      border-radius: 16px;
+      padding: 12px;
+      color: #f1f5f9;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+      animation: fadeIn 0.18s ease;
+    }
+
+    .drawer-panel.open { display: block; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #263042;
+    }
+
+    .drawer-title {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: #fbbf24;
+    }
+
+    .drawer-close {
+      background: #273244;
+      border: none;
+      color: #f8fafc;
+      border-radius: 6px;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .file-drop-zone {
+      display: block;
+      border: 1.5px dashed #475569;
+      border-radius: 12px;
+      padding: 12px;
+      text-align: center;
+      background: #0d1118;
+      cursor: pointer;
+      margin-bottom: 8px;
+    }
+
+    .file-drop-zone:hover { border-color: #fbbf24; }
+
+    .file-controls-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 6px;
+    }
+
+    .range-bar {
+      width: 100%;
+      accent-color: #fbbf24;
+      margin: 5px 0;
+    }
+
+    .preset-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .preset-card {
+      background: #1d2534;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 8px;
+      text-align: left;
+      cursor: pointer;
+      color: #f8fafc;
+      transition: all 0.15s ease;
+    }
+
+    .preset-card:hover {
+      border-color: #fbbf24;
+      background: #263144;
+    }
+
+    .preset-name { font-size: 11px; font-weight: 800; display: block; }
+    .preset-desc { font-size: 9.5px; color: #94a3b8; display: block; margin-top: 2px; }
+
+    .setting-row {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      margin-bottom: 9px;
+    }
+
+    .setting-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 700;
+      color: #cbd5e1;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(9, 11, 15, 0.96);
+      color: #fef3c7;
+      border: 1px solid #fbbf24;
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 800;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+      white-space: nowrap;
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    .clip-preview-box {
+      margin: 0 10px 8px;
+      background: #0d1118;
+      border: 1px solid #fbbf24;
+      border-radius: 12px;
+      padding: 7px 9px;
+      display: none;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .clip-preview-box.visible { display: flex; }
+    .clip-preview-box audio { height: 28px; flex: 1; max-width: 220px; }
+  </style>
+</head>
+<body>
+  <div class="app-shell" id="appShell">
+    <!-- ORIGINAL TOP SIGNATURE BEZEL -->
+    <div class="brand-bezel">
+      <span>SAMEER GRAPHICS // DSP</span>
+      <span class="brand-pill">SG-8 PRO • OFFLINE</span>
+    </div>
+
+    <!-- 1. TOP 5-TAB NAVIGATION BAR -->
+    <nav class="top-nav" aria-label="Studio Controls">
+      <button class="nav-btn active" data-tab="mic" id="tabMic">
+        <svg viewBox="0 0 24 24"><path d="M12 14a3 3 0 0 0 3-3V5a3 3 0 0 0-6 0v6a3 3 0 0 0 3 3zm5-3a5 5 0 0 1-10 0H5a7 7 0 0 0 6 6.92V21h2v-3.08A7 7 0 0 0 19 11h-2z"/></svg>
+        <span>Live Mic</span>
+      </button>
+      <button class="nav-btn" data-tab="file" id="tabFile">
+        <svg viewBox="0 0 24 24"><path d="M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z"/></svg>
+        <span>File Echo</span>
+      </button>
+      <button class="nav-btn" data-tab="presets" id="tabPresets">
+        <svg viewBox="0 0 24 24"><path d="M17 3H7c-1.1 0-2 .9-2 2v16l7-3 7 3V5c0-1.1-.9-2-2-2z"/></svg>
+        <span>Presets</span>
+      </button>
+      <button class="nav-btn" data-tab="theme" id="tabTheme">
+        <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.61-.38-.99 0-.83.67-1.5 1.5-1.5H16c2.76 0 5-2.24 5-5 0-4.42-4.03-8-9-8zm-5.5 9c-.83 0-1.5-.67-1.5-1.5S5.67 9 6.5 9 8 9.67 8 10.5 7.33 12 6.5 12zm3-4C8.67 8 8 7.33 8 6.5S8.67 5 9.5 5s1.5.67 1.5 1.5S10.33 8 9.5 8zm5 0c-.83 0-1.5-.67-1.5-1.5S13.67 5 14.5 5s1.5.67 1.5 1.5S15.33 8 14.5 8zm3 4c-.83 0-1.5-.67-1.5-1.5S16.67 9 17.5 9s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+        <span>Theme</span>
+      </button>
+      <button class="nav-btn" data-tab="settings" id="tabSettings">
+        <svg viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.488.488 0 0 0-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54a.484.484 0 0 0-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58a.49.49 0 0 0-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+        <span>Settings</span>
+      </button>
+    </nav>
+
+    <!-- 2. VOICE MIC, STEREO RECORDER & WAV DOWNLOAD BAR -->
+    <div class="recorder-bar">
+      <div class="rec-status-group">
+        <button class="btn-action btn-mic" id="btnToggleMic" title="Start or Stop Live Microphone">
+          <span>🎙️ MIC OFF</span>
+        </button>
+        <button class="btn-action btn-rec" id="btnRecord" title="Record Processed Output">
+          <span class="rec-dot"></span>
+          <span id="recBtnLabel">REC</span>
+        </button>
+        <span class="rec-timer" id="recTimer">00:00</span>
+      </div>
+      <button class="btn-action btn-save" id="btnDownloadWav" disabled title="Save & Download WAV">
+        <span>💾 SAVE WAV</span>
+      </button>
+    </div>
+
+    <!-- Recorded Clip Instant Player & Download Box -->
+    <div class="clip-preview-box" id="clipPreviewBox">
+      <audio id="recordedAudioPlayer" controls></audio>
+      <a id="directWavLink" class="btn-action btn-save" style="text-decoration:none;" href="#" download="SG8_Recording.wav">⬇ WAV</a>
+    </div>
+
+    <!-- 3. COLLAPSIBLE TAB DRAWERS -->
+    <!-- FILE ECHO DRAWER -->
+    <div class="drawer-panel" id="drawerFile">
+      <div class="drawer-header">
+        <span class="drawer-title">🎵 FILE ECHO — ADD VOICE / AUDIO FILE</span>
+        <button class="drawer-close" data-close="drawerFile">✕</button>
+      </div>
+      <label class="file-drop-zone" for="audioFileInput">
+        <div style="font-size: 11.5px; font-weight: 800; color: #f8fafc;">+ Tap to Add Voice or Audio File (MP3, WAV, M4A, OGG)</div>
+        <div id="loadedFileName" style="font-size: 10px; color: #94a3b8; margin-top: 3px;">No audio file loaded yet</div>
+        <input type="file" id="audioFileInput" accept="audio/*" style="display: none;" />
+      </label>
+      <div id="filePlayerControls" style="display: none;">
+        <input type="range" id="fileSeekSlider" class="range-bar" min="0" max="100" value="0" step="0.1" />
+        <div style="display: flex; justify-content: space-between; font-size: 10px; color: #94a3b8; margin-bottom: 6px;">
+          <span id="fileCurrentTime">0:00</span>
+          <span id="fileTotalTime">0:00</span>
+        </div>
+        <div class="file-controls-row">
+          <button class="btn-action btn-mic" id="btnFilePlayPause">▶ Play</button>
+          <button class="btn-action btn-mic" id="btnFileLoop">🔁 Loop: ON</button>
+          <button class="btn-action btn-save" id="btnOfflineRender" style="margin-left: auto;">⚡ Export Processed WAV</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRESETS DRAWER -->
+    <div class="drawer-panel" id="drawerPresets">
+      <div class="drawer-header">
+        <span class="drawer-title">🔖 SG-8 STUDIO & VOCAL PRESETS</span>
+        <button class="drawer-close" data-close="drawerPresets">✕</button>
+      </div>
+      <div class="preset-grid" id="presetGrid"></div>
+      <div style="display: flex; gap: 6px; margin-top: 6px;">
+        <input type="text" id="customPresetName" placeholder="Custom preset name..." style="flex:1; background:#090b0f; border:1px solid #334155; border-radius:8px; padding:6px 8px; color:#fff; font-size:11px;" />
+        <button class="btn-action btn-save" id="btnSaveCustomPreset">+ Save</button>
+      </div>
+    </div>
+
+    <!-- THEME DRAWER -->
+    <div class="drawer-panel" id="drawerTheme">
+      <div class="drawer-header">
+        <span class="drawer-title">🎨 HARDWARE CHASSIS EDITIONS</span>
+        <button class="drawer-close" data-close="drawerTheme">✕</button>
+      </div>
+      <div class="preset-grid">
+        <button class="preset-card" data-set-theme="pearl">
+          <span class="preset-name">Pearl White Studio (Default)</span>
+          <span class="preset-desc">Luxury pearlescent white & brushed silver</span>
+        </button>
+        <button class="preset-card" data-set-theme="titanium">
+          <span class="preset-name">Titanium Silver Studio</span>
+          <span class="preset-desc">Aerospace aluminum & cobalt OLED</span>
+        </button>
+        <button class="preset-card" data-set-theme="cream">
+          <span class="preset-name">Classic Cream Edition</span>
+          <span class="preset-desc">Warm boutique studio ivory</span>
+        </button>
+        <button class="preset-card" data-set-theme="carbon">
+          <span class="preset-name">Midnight Carbon & Gold</span>
+          <span class="preset-desc">Obsidian black studio rack</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- SETTINGS DRAWER -->
+    <div class="drawer-panel" id="drawerSettings">
+      <div class="drawer-header">
+        <span class="drawer-title">⚙️ STUDIO DSP & OFFLINE SETTINGS</span>
+        <button class="drawer-close" data-close="drawerSettings">✕</button>
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><span>Mic Input Preamp Boost</span><span id="lblInputGain">1.2x</span></div>
+        <input type="range" id="setInputGain" class="range-bar" min="0.5" max="3.0" step="0.1" value="1.2" />
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><span>Master Output Level</span><span id="lblMasterOut">100%</span></div>
+        <input type="range" id="setMasterOut" class="range-bar" min="0" max="1.5" step="0.05" value="1.0" />
+      </div>
+      <div class="setting-row">
+        <div class="setting-label"><span>Studio Raw Vocal Mode (No Browser AEC)</span><span id="lblRawMic">ON</span></div>
+        <input type="checkbox" id="chkRawMic" checked />
+      </div>
+      <div style="font-size: 10px; color: #94a3b8; line-height: 1.4; background: #090b0f; padding: 8px; border-radius: 8px;">
+        <strong>100% Offline Ready:</strong> All DSP echo, stereo ping-pong, modulation, OLED visualizer, and WAV encoding run locally on your device. Use wired earphones in Live Mic mode for studio clarity without feedback.
+      </div>
+    </div>
+
+    <!-- 4. MACHINED UPPER CONTROL CHASSIS -->
+    <main class="pedal-chassis">
+      <span class="hex-screw screw-tl"></span>
+      <span class="hex-screw screw-tr"></span>
+
+      <!-- Top Level Meters & Red CHECK LED -->
+      <div class="meter-header">
+        <div class="meter-box">
+          <span class="meter-label">IN</span>
+          <div class="led-strip" id="inMeter">
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+          </div>
+        </div>
+
+        <div class="check-indicator">
+          <div class="check-led active" id="checkLed"></div>
+          <span class="check-text">CHECK</span>
+        </div>
+
+        <div class="meter-box">
+          <div class="led-strip" id="outMeter">
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+            <div class="led-seg"></div><div class="led-seg"></div><div class="led-seg"></div>
+          </div>
+          <span class="meter-label">OUT</span>
+        </div>
+      </div>
+
+      <!-- ORIGINAL OLED DUAL-WAVEFORM & ECHO TAP VISUALIZER -->
+      <div class="oled-screen-bezel">
+        <div class="oled-top-hud">
+          <span id="oledModeHud">DSP // 800ms STEREO</span>
+          <span class="hud-right" id="oledPingHud">PING-PONG: ON</span>
+        </div>
+        <canvas id="oledCanvas"></canvas>
+      </div>
+
+      <!-- 3 Main LED-Ring Rotary Knobs: E.LEVEL, F.BACK, D.TIME -->
+      <div class="knobs-row">
+        <div class="knob-unit">
+          <div class="knob-title">E.LEVEL</div>
+          <div class="knob-dial-wrap">
+            <svg class="knob-ticks" viewBox="0 0 68 68" id="ticks-elevel"></svg>
+            <div class="knob-cap" id="knob-elevel" data-param="elevel">
+              <div class="knob-pointer"></div>
+            </div>
+          </div>
+          <div class="knob-val" id="val-elevel">6.5</div>
+        </div>
+
+        <div class="knob-unit">
+          <div class="knob-title">F.BACK</div>
+          <div class="knob-dial-wrap">
+            <svg class="knob-ticks" viewBox="0 0 68 68" id="ticks-fback"></svg>
+            <div class="knob-cap" id="knob-fback" data-param="fback">
+              <div class="knob-pointer"></div>
+            </div>
+          </div>
+          <div class="knob-val" id="val-fback">5.0</div>
+        </div>
+
+        <div class="knob-unit">
+          <div class="knob-title">D.TIME</div>
+          <div class="knob-dial-wrap">
+            <svg class="knob-ticks" viewBox="0 0 68 68" id="ticks-dtime"></svg>
+            <div class="knob-cap" id="knob-dtime" data-param="dtime">
+              <div class="knob-pointer"></div>
+            </div>
+          </div>
+          <div class="knob-val" id="val-dtime">7.8</div>
+        </div>
+      </div>
+
+      <!-- Center Mode Selector + TAP & HOLD Buttons -->
+      <div class="mode-section">
+        <button class="stomp-mini-btn" id="btnTap">TAP</button>
+
+        <div class="mode-dial-container">
+          <span class="mode-label m-lbl-0" data-mode-idx="0">50ms</span>
+          <span class="mode-label m-lbl-1" data-mode-idx="1">200ms</span>
+          <span class="mode-label m-lbl-2 active-mode" data-mode-idx="2">800ms</span>
+          <span class="mode-label m-lbl-3" data-mode-idx="3">3200ms</span>
+          <span class="mode-label m-lbl-4" data-mode-idx="4">MODULATE</span>
+          <span class="mode-label m-lbl-5" data-mode-idx="5">ANALOG</span>
+
+          <div class="mode-knob-cap" id="knob-mode" data-mode-idx="2">
+            <div class="knob-pointer"></div>
+          </div>
+        </div>
+
+        <button class="stomp-mini-btn" id="btnHold">HOLD</button>
+      </div>
+
+      <!-- Digital Delay Time & BPM Readout -->
+      <div class="digital-readout" id="digitalReadout">
+        800ms <span class="sub-readout">| 635 ms | 94 BPM</span>
+      </div>
+
+      <!-- Amber Ping-Pong Pan Bar & FX Button -->
+      <div class="stereo-fx-row">
+        <div class="pingpong-pill" id="pingPongPill">
+          <div class="pan-control">
+            <span class="pan-badge">L</span>
+            <input type="range" class="pan-slider" id="stereoPanSlider" min="-1" max="1" step="0.05" value="0.35" title="Stereo Spread / Pan" />
+            <span class="pan-badge">R</span>
+          </div>
+          <button class="pp-toggle-btn" id="btnPingPong">
+            <span class="pp-title">PING-PONG</span>
+            <span class="pp-state" id="ppStateText">ON</span>
+          </button>
+        </div>
+
+        <button class="fx-btn active" id="btnFx">
+          <span class="fx-dot"></span>
+          <span>FX</span>
+        </button>
+      </div>
+    </main>
+
+    <!-- 5. ORIGINAL FLAGSHIP FOOTSWITCH PLATE (SG-8 PRO // _its_sameer_95_) -->
+    <section class="footswitch-plate" id="footswitchPlate" title="Tap Pedal to Toggle Effect Bypass">
+      <div class="plate-top-row">
+        <div class="sg-emblem" title="SG-8 Pro Custom Engine">
+          <span class="sg-emblem-dot"></span>
+          <span>SG-8 PRO</span>
+        </div>
+
+        <button class="lock-btn" id="btnLock" title="Lock/Unlock Knobs">
+          <svg id="lockIconSvg" viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>
+          <span id="lockText">Lock</span>
+        </button>
+      </div>
+
+      <h1 class="pedal-brand-title">Studio Digital Delay</h1>
+      <div class="pedal-brand-sub">SG-8 PRO ENGINE</div>
+      <div class="pedal-dev-credit">DEVELOPER: _its_sameer_95_</div>
+      <div class="pedal-tap-hint" id="bypassStatusHint">EFFECT ACTIVE • TAP PLATE TO BYPASS</div>
+    </section>
+  </div>
+
+  <!-- Toast Message Banner -->
+  <div class="toast-msg" id="toastMsg">Ready</div>
+
+  <script>
+    /* ==========================================================================
+       SG-8 PRO STUDIO DIGITAL DELAY — OFFLINE WEB AUDIO ENGINE & OLED VISUALIZER
+       Developer: _its_sameer_95_
+       ========================================================================== */
+    (() => {
+      "use strict";
+
+      // ------------------------------------------------------------------------
+      // 1. STATE & CONSTANTS
+      // ------------------------------------------------------------------------
+      const MODES = [
+        { name: "50ms",     minMs: 10,  maxMs: 50,   type: "digital" },
+        { name: "200ms",    minMs: 40,  maxMs: 200,  type: "digital" },
+        { name: "800ms",    minMs: 150, maxMs: 800,  type: "digital" },
+        { name: "3200ms",   minMs: 600, maxMs: 3200, type: "digital" },
+        { name: "MODULATE", minMs: 80,  maxMs: 800,  type: "modulate" },
+        { name: "ANALOG",   minMs: 50,  maxMs: 600,  type: "analog" }
+      ];
+
+      const FACTORY_PRESETS = [
+        { name: "Vocal Slapback", desc: "Crisp 115ms studio vocal echo", mode: 1, elevel: 5.2, fback: 2.4, dtime: 4.8, pp: false, fx: true, pan: 0.0 },
+        { name: "Sufi / Qawwali Hall", desc: "Lush 520ms stereo vocal tail", mode: 2, elevel: 6.8, fback: 5.8, dtime: 5.7, pp: true, fx: true, pan: 0.45 },
+        { name: "SG-8 Flagship 800", desc: "Signature 635ms ping-pong", mode: 2, elevel: 6.5, fback: 5.0, dtime: 7.8, pp: true, fx: true, pan: 0.35 },
+        { name: "Analog Tape Warmth", desc: "Dark BBD bucket-brigade repeats", mode: 5, elevel: 6.0, fback: 5.5, dtime: 5.8, pp: false, fx: true, pan: -0.2 },
+        { name: "Ambient Modulate", desc: "Chorus shimmer space delay", mode: 4, elevel: 7.4, fback: 6.8, dtime: 6.5, pp: true, fx: true, pan: 0.4 },
+        { name: "Dub 3200ms Cavern", desc: "Deep long atmospheric echo", mode: 3, elevel: 7.0, fback: 7.2, dtime: 4.5, pp: true, fx: true, pan: 0.25 }
+      ];
+
+      const state = {
+        bypassed: false,
+        locked: false,
+        modeIdx: 2,          // 800ms
+        elevel: 6.5,         // 0.0 - 10.0
+        fback: 5.0,          // 0.0 - 10.0
+        dtime: 7.8,          // 0.0 - 10.0
+        delayMs: 635,
+        pingPong: true,
+        fxActive: true,
+        holdActive: false,
+        stereoPan: 0.35,
+        micActive: false,
+        isRecording: false,
+        recStartTime: 0,
+        recTimerInterval: null,
+        lastWavBlob: null,
+        lastWavUrl: null,
+        lastWavName: "",
+        inputGainVal: 1.2,
+        masterOutVal: 1.0,
+        rawMic: true,
+        tapTimes: [],
+        loadedAudioBuffer: null,
+        filePlaying: false,
+        fileLoop: true,
+        fileOffset: 0,
+        fileStartTime: 0
+      };
+
+      // ------------------------------------------------------------------------
+      // 2. DOM REFERENCES
+      // ------------------------------------------------------------------------
+      const $ = (id) => document.getElementById(id);
+
+      const checkLed = $("checkLed");
+      const bypassStatusHint = $("bypassStatusHint");
+      const footswitchPlate = $("footswitchPlate");
+      const btnLock = $("btnLock");
+      const lockText = $("lockText");
+      const digitalReadout = $("digitalReadout");
+      const oledModeHud = $("oledModeHud");
+      const oledPingHud = $("oledPingHud");
+      const oledCanvas = $("oledCanvas");
+      const pingPongPill = $("pingPongPill");
+      const ppStateText = $("ppStateText");
+      const btnPingPong = $("btnPingPong");
+      const stereoPanSlider = $("stereoPanSlider");
+      const btnFx = $("btnFx");
+      const btnTap = $("btnTap");
+      const btnHold = $("btnHold");
+      const btnToggleMic = $("btnToggleMic");
+      const btnRecord = $("btnRecord");
+      const recBtnLabel = $("recBtnLabel");
+      const recTimer = $("recTimer");
+      const btnDownloadWav = $("btnDownloadWav");
+      const clipPreviewBox = $("clipPreviewBox");
+      const recordedAudioPlayer = $("recordedAudioPlayer");
+      const btnDownloadClipNow = $("btnDownloadClipNow");
+      const toastMsg = $("toastMsg");
+
+      // ------------------------------------------------------------------------
+      // 3. HELPER: TOAST NOTIFICATION
+      // ------------------------------------------------------------------------
+      let toastTimeout = null;
+      function showToast(text) {
+        toastMsg.textContent = text;
+        toastMsg.classList.add("show");
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => toastMsg.classList.remove("show"), 2300);
+      }
+
+      // ------------------------------------------------------------------------
+      // 4. WEB AUDIO API DSP GRAPH (Stereo SG-8 Delay + Analog + Mod + Recorder)
+      // ------------------------------------------------------------------------
+      let audioCtx = null;
+      let micStream = null;
+      let micSourceNode = null;
+      let fileSourceNode = null;
+
+      let inputGainNode = null;
+      let inAnalyser = null;
+      let outAnalyser = null;
+      let dryGainNode = null;
+      let wetGainNode = null;
+      let delayLeft = null;
+      let delayRight = null;
+      let fbGainLeft = null;
+      let fbGainRight = null;
+      let crossFbLtoR = null;
+      let crossFbRtoL = null;
+      let toneFilterL = null;
+      let toneFilterR = null;
+      let lfoOsc = null;
+      let lfoGainL = null;
+      let lfoGainR = null;
+      let pannerLeft = null;
+      let pannerRight = null;
+      let limiterNode = null;
+      let masterGainNode = null;
+
+      let pcmRecorderNode = null;
+      let recordedChunksL = [];
+      let recordedChunksR = [];
+
+      function initAudioEngine() {
+        if (audioCtx) {
+          if (audioCtx.state === "suspended") audioCtx.resume();
+          return;
+        }
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        audioCtx = new AudioContextClass();
+
+        inputGainNode = audioCtx.createGain();
+        inputGainNode.gain.value = state.inputGainVal;
+
+        inAnalyser = audioCtx.createAnalyser();
+        inAnalyser.fftSize = 256;
+
+        outAnalyser = audioCtx.createAnalyser();
+        outAnalyser.fftSize = 256;
+
+        dryGainNode = audioCtx.createGain();
+        wetGainNode = audioCtx.createGain();
+
+        delayLeft = audioCtx.createDelay(4.0);
+        delayRight = audioCtx.createDelay(4.0);
+
+        fbGainLeft = audioCtx.createGain();
+        fbGainRight = audioCtx.createGain();
+        crossFbLtoR = audioCtx.createGain();
+        crossFbRtoL = audioCtx.createGain();
+
+        toneFilterL = audioCtx.createBiquadFilter();
+        toneFilterR = audioCtx.createBiquadFilter();
+        toneFilterL.type = "lowpass";
+        toneFilterR.type = "lowpass";
+
+        lfoOsc = audioCtx.createOscillator();
+        lfoOsc.type = "sine";
+        lfoOsc.frequency.value = 1.6;
+        lfoGainL = audioCtx.createGain();
+        lfoGainR = audioCtx.createGain();
+        lfoGainL.gain.value = 0;
+        lfoGainR.gain.value = 0;
+        lfoOsc.connect(lfoGainL);
+        lfoOsc.connect(lfoGainR);
+        lfoGainL.connect(delayLeft.delayTime);
+        lfoGainR.connect(delayRight.delayTime);
+        lfoOsc.start();
+
+        pannerLeft = audioCtx.createStereoPanner();
+        pannerRight = audioCtx.createStereoPanner();
+
+        limiterNode = audioCtx.createDynamicsCompressor();
+        limiterNode.threshold.value = -3.0;
+        limiterNode.knee.value = 6.0;
+        limiterNode.ratio.value = 12.0;
+        limiterNode.attack.value = 0.003;
+        limiterNode.release.value = 0.15;
+
+        masterGainNode = audioCtx.createGain();
+        masterGainNode.gain.value = state.masterOutVal;
+
+        // Routing
+        inputGainNode.connect(inAnalyser);
+        inputGainNode.connect(dryGainNode);
+        dryGainNode.connect(limiterNode);
+
+        inputGainNode.connect(toneFilterL);
+        toneFilterL.connect(delayLeft);
+        toneFilterR.connect(delayRight);
+
+        delayLeft.connect(fbGainLeft);
+        fbGainLeft.connect(toneFilterL);
+
+        delayRight.connect(fbGainRight);
+        fbGainRight.connect(toneFilterR);
+
+        delayLeft.connect(crossFbLtoR);
+        crossFbLtoR.connect(toneFilterR);
+
+        delayRight.connect(crossFbRtoL);
+        crossFbRtoL.connect(toneFilterL);
+
+        delayLeft.connect(pannerLeft);
+        delayRight.connect(pannerRight);
+        pannerLeft.connect(wetGainNode);
+        pannerRight.connect(wetGainNode);
+
+        wetGainNode.connect(limiterNode);
+        limiterNode.connect(masterGainNode);
+        masterGainNode.connect(outAnalyser);
+        outAnalyser.connect(audioCtx.destination);
+
+        // Stereo PCM Capture for lossless WAV Recording
+        pcmRecorderNode = audioCtx.createScriptProcessor(4096, 2, 2);
+        masterGainNode.connect(pcmRecorderNode);
+        const silentSink = audioCtx.createGain();
+        silentSink.gain.value = 0;
+        pcmRecorderNode.connect(silentSink);
+        silentSink.connect(audioCtx.destination);
+
+        pcmRecorderNode.onaudioprocess = (e) => {
+          if (!state.isRecording) return;
+          const inL = e.inputBuffer.getChannelData(0);
+          const inR = e.inputBuffer.numberOfChannels > 1 ? e.inputBuffer.getChannelData(1) : inL;
+          recordedChunksL.push(new Float32Array(inL));
+          recordedChunksR.push(new Float32Array(inR));
+        };
+
+        updateDspParameters();
+      }
+
+      // ------------------------------------------------------------------------
+      // 5. UPDATE DSP PARAMETERS FROM KNOBS & MODES
+      // ------------------------------------------------------------------------
+      function updateDspParameters() {
+        const modeObj = MODES[state.modeIdx];
+        const normTime = state.dtime / 10;
+        state.delayMs = Math.round(modeObj.minMs + normTime * (modeObj.maxMs - modeObj.minMs));
+        const bpm = Math.max(20, Math.min(300, Math.round(60000 / Math.max(1, state.delayMs))));
+
+        digitalReadout.innerHTML = `${modeObj.name} <span class="sub-readout">| ${state.delayMs} ms | ${bpm} BPM</span>`;
+        oledModeHud.textContent = `DSP // ${modeObj.name} (${state.delayMs}ms)`;
+        oledPingHud.textContent = state.holdActive ? "HOLD: FREEZE" : `PING-PONG: ${state.pingPong ? "ON" : "OFF"}`;
+
+        if (!audioCtx) return;
+
+        const now = audioCtx.currentTime;
+        const delaySec = Math.max(0.005, state.delayMs / 1000);
+
+        delayLeft.delayTime.setTargetAtTime(delaySec, now, 0.025);
+        delayRight.delayTime.setTargetAtTime(
+          state.pingPong ? Math.min(3.9, delaySec * 1.5) : delaySec,
+          now,
+          0.025
+        );
+
+        const wetLevel = state.bypassed ? 0 : (state.elevel / 10) * 1.15;
+        dryGainNode.gain.setTargetAtTime(1.0, now, 0.02);
+        wetGainNode.gain.setTargetAtTime(wetLevel, now, 0.02);
+
+        const baseFb = state.holdActive ? 0.995 : Math.min(0.92, (state.fback / 10) * 0.88);
+        if (state.pingPong) {
+          fbGainLeft.gain.setTargetAtTime(baseFb * 0.25, now, 0.02);
+          fbGainRight.gain.setTargetAtTime(baseFb * 0.25, now, 0.02);
+          crossFbLtoR.gain.setTargetAtTime(baseFb * 0.85, now, 0.02);
+          crossFbRtoL.gain.setTargetAtTime(baseFb * 0.85, now, 0.02);
+        } else {
+          fbGainLeft.gain.setTargetAtTime(baseFb, now, 0.02);
+          fbGainRight.gain.setTargetAtTime(baseFb, now, 0.02);
+          crossFbLtoR.gain.setTargetAtTime(0, now, 0.02);
+          crossFbRtoL.gain.setTargetAtTime(0, now, 0.02);
+        }
+
+        let cutoff = 16000;
+        if (modeObj.type === "analog") {
+          cutoff = state.fxActive ? 2200 : 2800;
+        } else if (state.fxActive) {
+          cutoff = 6500;
+        }
+        toneFilterL.frequency.setTargetAtTime(cutoff, now, 0.03);
+        toneFilterR.frequency.setTargetAtTime(cutoff, now, 0.03);
+
+        const modDepth = modeObj.type === "modulate" ? 0.0045 : (state.fxActive ? 0.0012 : 0);
+        lfoGainL.gain.setTargetAtTime(modDepth, now, 0.05);
+        lfoGainR.gain.setTargetAtTime(-modDepth, now, 0.05);
+
+        const spread = Math.max(0.15, Math.abs(state.stereoPan));
+        const bias = state.stereoPan * 0.4;
+        pannerLeft.pan.setTargetAtTime(Math.max(-1, Math.min(1, -spread + bias)), now, 0.02);
+        pannerRight.pan.setTargetAtTime(Math.max(-1, Math.min(1, spread + bias)), now, 0.02);
+      }
+
+      // ------------------------------------------------------------------------
+      // 6. REAL-TIME LED METERS + OLED WAVEFORM & ECHO TAP VISUALIZER
+      // ------------------------------------------------------------------------
+      const inSegs = Array.from($("inMeter").children);
+      const outSegs = Array.from($("outMeter").children);
+
+      function renderMeter(analyser, segs) {
+        if (!analyser) return 0;
+        const data = new Uint8Array(analyser.frequencyBinCount);
+        analyser.getByteTimeDomainData(data);
+        let peak = 0;
+        for (let i = 0; i < data.length; i++) {
+          const v = Math.abs(data[i] - 128) / 128;
+          if (v > peak) peak = v;
+        }
+        const level = Math.min(9, Math.round(peak * 22));
+        segs.forEach((seg, idx) => {
+          seg.className = "led-seg";
+          if (idx < level) {
+            if (idx < 6) seg.classList.add("on-green");
+            else if (idx < 8) seg.classList.add("on-yellow");
+            else seg.classList.add("on-red");
+          }
+        });
+        return peak;
+      }
+
+      function resizeOledCanvas() {
+        const rect = oledCanvas.getBoundingClientRect();
+        const dpr = Math.min(2, window.devicePixelRatio || 1);
+        if (rect.width > 0 && rect.height > 0) {
+          oledCanvas.width = Math.round(rect.width * dpr);
+          oledCanvas.height = Math.round(rect.height * dpr);
+        }
+      }
+      window.addEventListener("resize", resizeOledCanvas);
+      resizeOledCanvas();
+
+      let animPhase = 0;
+      function startVisualLoop() {
+        const ctx = oledCanvas.getContext("2d");
+
+        function loop() {
+          renderMeter(inAnalyser, inSegs);
+          const outPeak = renderMeter(outAnalyser, outSegs);
+
+          const w = oledCanvas.width;
+          const h = oledCanvas.height;
+          if (w > 0 && h > 0) {
+            ctx.clearRect(0, 0, w, h);
+
+            // Subtle Grid Lines
+            ctx.strokeStyle = "rgba(148, 163, 184, 0.12)";
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(0, h / 2);
+            ctx.lineTo(w, h / 2);
+            ctx.stroke();
+
+            // Read theme colors
+            const styles = getComputedStyle(document.documentElement);
+            const waveColor = styles.getPropertyValue("--oled-line").trim() || "#38bdf8";
+            const echoColor = styles.getPropertyValue("--oled-echo").trim() || "#fbbf24";
+
+            // Draw Delay Echo Decay Tap Bars on Right Side
+            const taps = 8;
+            const fbRatio = state.bypassed ? 0 : (state.holdActive ? 0.96 : (state.fback / 10) * 0.85);
+            const wetRatio = state.bypassed ? 0 : (state.elevel / 10);
+            const barAreaStart = w * 0.56;
+            const barSpacing = (w * 0.41) / taps;
+
+            for (let t = 0; t < taps; t++) {
+              const amp = wetRatio * Math.pow(fbRatio, t) * (0.75 + outPeak * 1.4);
+              const barH = Math.max(2, Math.min(h * 0.85, amp * h * 0.85));
+              const x = barAreaStart + t * barSpacing;
+              const y = (h - barH) / 2;
+
+              ctx.fillStyle = echoColor;
+              ctx.globalAlpha = Math.max(0.18, 1 - t * 0.1);
+              ctx.fillRect(x, y, Math.max(2.5, barSpacing * 0.55), barH);
+            }
+            ctx.globalAlpha = 1;
+
+            // Draw Live Audio Waveform (or Smooth Standby Sine Wave) on Left Side
+            const waveW = w * 0.52;
+            ctx.strokeStyle = waveColor;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+
+            if (outAnalyser && outPeak > 0.008) {
+              const buf = new Uint8Array(outAnalyser.frequencyBinCount);
+              outAnalyser.getByteTimeDomainData(buf);
+              const slice = waveW / buf.length;
+              for (let i = 0; i < buf.length; i++) {
+                const v = (buf[i] - 128) / 128;
+                const y = h / 2 + v * (h * 0.45);
+                if (i === 0) ctx.moveTo(0, y);
+                else ctx.lineTo(i * slice, y);
+              }
+            } else {
+              animPhase += 0.07;
+              const steps = 48;
+              for (let i = 0; i <= steps; i++) {
+                const x = (i / steps) * waveW;
+                const env = Math.sin((i / steps) * Math.PI);
+                const y = h / 2 + Math.sin(i * 0.35 + animPhase) * (h * 0.18) * env;
+                if (i === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+              }
+            }
+            ctx.stroke();
+          }
+
+          requestAnimationFrame(loop);
+        }
+        requestAnimationFrame(loop);
+      }
+      startVisualLoop();
+
+      // ------------------------------------------------------------------------
+      // 7. LIVE MICROPHONE CAPTURE
+      // ------------------------------------------------------------------------
+      async function ensureAudioReady() {
+        initAudioEngine();
+        if (audioCtx && audioCtx.state === "suspended") {
+          try {
+            await audioCtx.resume();
+          } catch (_) {}
+        }
+      }
+
+      async function toggleLiveMic() {
+        if (state.micActive) {
+          if (micStream) {
+            micStream.getTracks().forEach((t) => t.stop());
+            micStream = null;
+          }
+          if (micSourceNode) {
+            micSourceNode.disconnect();
+            micSourceNode = null;
+          }
+          state.micActive = false;
+          btnToggleMic.classList.remove("live");
+          btnToggleMic.innerHTML = "<span>🎙️ MIC OFF</span>";
+          showToast("Live Microphone Stopped");
+          return;
+        }
+
+        try {
+          await ensureAudioReady();
+          if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+            throw new Error("getUserMedia unavailable");
+          }
+          const primaryConstraints = {
+            audio: {
+              echoCancellation: !state.rawMic,
+              noiseSuppression: !state.rawMic,
+              autoGainControl: false
+            }
+          };
+          try {
+            micStream = await navigator.mediaDevices.getUserMedia(primaryConstraints);
+          } catch (_) {
+            micStream = await navigator.mediaDevices.getUserMedia({ audio: true });
+          }
+
+          await ensureAudioReady();
+          micSourceNode = audioCtx.createMediaStreamSource(micStream);
+          micSourceNode.connect(inputGainNode);
+
+          state.micActive = true;
+          btnToggleMic.classList.add("live");
+          btnToggleMic.innerHTML = "<span>🎙️ MIC LIVE</span>";
+          showToast("Live Mic Active! Use wired headphones for best echo");
+        } catch (err) {
+          const msg = (err && err.name === "NotAllowedError")
+            ? "Microphone permission denied! Allow mic in browser/app settings"
+            : "Microphone unavailable or blocked (HTTPS/Mic permission needed)";
+          showToast(msg);
+        }
+      }
+
+      btnToggleMic.addEventListener("click", toggleLiveMic);
+
+      // ------------------------------------------------------------------------
+      // 8. VOICE ADD / FILE ECHO (LOAD, PLAY, SCRUB, OFFLINE RENDER WAV)
+      // ------------------------------------------------------------------------
+      const audioFileInput = $("audioFileInput");
+      const loadedFileName = $("loadedFileName");
+      const filePlayerControls = $("filePlayerControls");
+      const fileSeekSlider = $("fileSeekSlider");
+      const fileCurrentTime = $("fileCurrentTime");
+      const fileTotalTime = $("fileTotalTime");
+      const btnFilePlayPause = $("btnFilePlayPause");
+      const btnFileLoop = $("btnFileLoop");
+      const btnOfflineRender = $("btnOfflineRender");
+
+      function formatTime(sec) {
+        if (!isFinite(sec) || sec < 0) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return `${m}:${s < 10 ? "0" : ""}${s}`;
+      }
+
+      audioFileInput.addEventListener("change", async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+        initAudioEngine();
+        stopFilePlayback();
+        loadedFileName.textContent = `Decoding: ${file.name}...`;
+        try {
+          const arrayBuf = await file.arrayBuffer();
+          state.loadedAudioBuffer = await audioCtx.decodeAudioData(arrayBuf);
+          state.fileOffset = 0;
+          loadedFileName.textContent = `Loaded: ${file.name} (${formatTime(state.loadedAudioBuffer.duration)})`;
+          fileTotalTime.textContent = formatTime(state.loadedAudioBuffer.duration);
+          fileCurrentTime.textContent = "0:00";
+          fileSeekSlider.value = 0;
+          filePlayerControls.style.display = "block";
+          showToast("Voice/Audio file added! Tap Play or Record");
+          playFilePlayback();
+        } catch (err) {
+          loadedFileName.textContent = "Error decoding audio file";
+          showToast("Unsupported audio format");
+        }
+      });
+
+      function playFilePlayback() {
+        if (!state.loadedAudioBuffer) return;
+        initAudioEngine();
+        stopFilePlayback(false);
+
+        fileSourceNode = audioCtx.createBufferSource();
+        fileSourceNode.buffer = state.loadedAudioBuffer;
+        fileSourceNode.loop = state.fileLoop;
+        fileSourceNode.connect(inputGainNode);
+
+        state.fileStartTime = audioCtx.currentTime - state.fileOffset;
+        fileSourceNode.start(0, state.fileOffset % state.loadedAudioBuffer.duration);
+        state.filePlaying = true;
+        btnFilePlayPause.textContent = "⏸ Pause";
+
+        fileSourceNode.onended = () => {
+          if (!state.fileLoop && state.filePlaying) {
+            state.filePlaying = false;
+            state.fileOffset = 0;
+            btnFilePlayPause.textContent = "▶ Play";
+          }
+        };
+      }
+
+      function stopFilePlayback(resetOffset = false) {
+        if (fileSourceNode) {
+          try { fileSourceNode.stop(); } catch (_) {}
+          fileSourceNode.disconnect();
+          fileSourceNode = null;
+        }
+        if (state.filePlaying && audioCtx && state.loadedAudioBuffer) {
+          state.fileOffset = (audioCtx.currentTime - state.fileStartTime) % state.loadedAudioBuffer.duration;
+        }
+        if (resetOffset) state.fileOffset = 0;
+        state.filePlaying = false;
+        btnFilePlayPause.textContent = "▶ Play";
+      }
+
+      btnFilePlayPause.addEventListener("click", () => {
+        if (state.filePlaying) stopFilePlayback(false);
+        else playFilePlayback();
+      });
+
+      btnFileLoop.addEventListener("click", () => {
+        state.fileLoop = !state.fileLoop;
+        btnFileLoop.textContent = `🔁 Loop: ${state.fileLoop ? "ON" : "OFF"}`;
+        if (fileSourceNode) fileSourceNode.loop = state.fileLoop;
+      });
+
+      fileSeekSlider.addEventListener("input", () => {
+        if (!state.loadedAudioBuffer) return;
+        const pct = parseFloat(fileSeekSlider.value) / 100;
+        state.fileOffset = pct * state.loadedAudioBuffer.duration;
+        fileCurrentTime.textContent = formatTime(state.fileOffset);
+        if (state.filePlaying) playFilePlayback();
+      });
+
+      setInterval(() => {
+        if (state.filePlaying && audioCtx && state.loadedAudioBuffer) {
+          const cur = (audioCtx.currentTime - state.fileStartTime) % state.loadedAudioBuffer.duration;
+          fileCurrentTime.textContent = formatTime(cur);
+          fileSeekSlider.value = (cur / state.loadedAudioBuffer.duration) * 100;
+        }
+      }, 200);
+
+      btnOfflineRender.addEventListener("click", async () => {
+        if (!state.loadedAudioBuffer) return;
+        showToast("Rendering processed stereo WAV...");
+        const tailSec = Math.min(6.0, (state.delayMs / 1000) * 4 + 1.5);
+        const totalSamples = Math.ceil((state.loadedAudioBuffer.duration + tailSec) * state.loadedAudioBuffer.sampleRate);
+        const offCtx = new OfflineAudioContext(2, totalSamples, state.loadedAudioBuffer.sampleRate);
+
+        const src = offCtx.createBufferSource();
+        src.buffer = state.loadedAudioBuffer;
+
+        const dry = offCtx.createGain();
+        const wet = offCtx.createGain();
+        const dL = offCtx.createDelay(4.0);
+        const dR = offCtx.createDelay(4.0);
+        const fbL = offCtx.createGain();
+        const fbR = offCtx.createGain();
+        const xLR = offCtx.createGain();
+        const xRL = offCtx.createGain();
+        const fltL = offCtx.createBiquadFilter();
+        const fltR = offCtx.createBiquadFilter();
+        const panL = offCtx.createStereoPanner();
+        const panR = offCtx.createStereoPanner();
+
+        const delaySec = Math.max(0.005, state.delayMs / 1000);
+        dL.delayTime.value = delaySec;
+        dR.delayTime.value = state.pingPong ? Math.min(3.9, delaySec * 1.5) : delaySec;
+
+        const wetLevel = state.bypassed ? 0 : (state.elevel / 10) * 1.15;
+        dry.gain.value = 1.0;
+        wet.gain.value = wetLevel;
+
+        const baseFb = Math.min(0.92, (state.fback / 10) * 0.88);
+        if (state.pingPong) {
+          fbL.gain.value = baseFb * 0.25;
+          fbR.gain.value = baseFb * 0.25;
+          xLR.gain.value = baseFb * 0.85;
+          xRL.gain.value = baseFb * 0.85;
+        } else {
+          fbL.gain.value = baseFb;
+          fbR.gain.value = baseFb;
+          xLR.gain.value = 0;
+          xRL.gain.value = 0;
+        }
+
+        const modeObj = MODES[state.modeIdx];
+        const cutoff = modeObj.type === "analog" ? 2400 : (state.fxActive ? 6500 : 16000);
+        fltL.type = "lowpass"; fltL.frequency.value = cutoff;
+        fltR.type = "lowpass"; fltR.frequency.value = cutoff;
+
+        const spread = Math.max(0.15, Math.abs(state.stereoPan));
+        panL.pan.value = -spread;
+        panR.pan.value = spread;
+
+        src.connect(dry);
+        dry.connect(offCtx.destination);
+
+        src.connect(fltL);
+        fltL.connect(dL);
+        fltR.connect(dR);
+
+        dL.connect(fbL); fbL.connect(fltL);
+        dR.connect(fbR); fbR.connect(fltR);
+        dL.connect(xLR); xLR.connect(fltR);
+        dR.connect(xRL); xRL.connect(fltL);
+
+        dL.connect(panL); panL.connect(wet);
+        dR.connect(panR); panR.connect(wet);
+        wet.connect(offCtx.destination);
+
+        src.start(0);
+        const rendered = await offCtx.startRendering();
+        const wavBlob = encodeAudioBufferToWav(rendered);
+        setSavedWavBlob(wavBlob, `SG8_Echo_${Date.now()}.wav`);
+        triggerWavDownload();
+      });
+
+      // ------------------------------------------------------------------------
+      // 9. REAL-TIME VOICE RECORDING & LOSSLESS WAV EXPORT
+      // ------------------------------------------------------------------------
+      function encodeFloatArraysToWav(chunksL, chunksR, sampleRate) {
+        let totalLength = 0;
+        for (let i = 0; i < chunksL.length; i++) totalLength += chunksL[i].length;
+
+        const buffer = new ArrayBuffer(44 + totalLength * 4);
+        const view = new DataView(buffer);
+
+        const writeStr = (offset, str) => {
+          for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+        };
+
+        writeStr(0, "RIFF");
+        view.setUint32(4, 36 + totalLength * 4, true);
+        writeStr(8, "WAVE");
+        writeStr(12, "fmt ");
+        view.setUint32(16, 16, true);
+        view.setUint16(20, 1, true);
+        view.setUint16(22, 2, true);
+        view.setUint32(24, sampleRate, true);
+        view.setUint32(28, sampleRate * 4, true);
+        view.setUint16(32, 4, true);
+        view.setUint16(34, 16, true);
+        writeStr(36, "data");
+        view.setUint32(40, totalLength * 4, true);
+
+        let offset = 44;
+        for (let i = 0; i < chunksL.length; i++) {
+          const L = chunksL[i];
+          const R = chunksR[i];
+          for (let j = 0; j < L.length; j++) {
+            const sL = Math.max(-1, Math.min(1, L[j]));
+            const sR = Math.max(-1, Math.min(1, R[j]));
+            view.setInt16(offset, sL < 0 ? sL * 0x8000 : sL * 0x7FFF, true);
+            view.setInt16(offset + 2, sR < 0 ? sR * 0x8000 : sR * 0x7FFF, true);
+            offset += 4;
+          }
+        }
+        return new Blob([buffer], { type: "audio/wav" });
+      }
+
+      function encodeAudioBufferToWav(audioBuf) {
+        const L = audioBuf.getChannelData(0);
+        const R = audioBuf.numberOfChannels > 1 ? audioBuf.getChannelData(1) : L;
+        return encodeFloatArraysToWav([L], [R], audioBuf.sampleRate);
+      }
+
+      function setSavedWavBlob(blob, filename) {
+        if (state.lastWavUrl) URL.revokeObjectURL(state.lastWavUrl);
+        state.lastWavBlob = blob;
+        state.lastWavUrl = URL.createObjectURL(blob);
+        state.lastWavName = filename;
+
+        btnDownloadWav.disabled = false;
+        recordedAudioPlayer.src = state.lastWavUrl;
+        const directLink = $("directWavLink");
+        if (directLink) {
+          directLink.href = state.lastWavUrl;
+          directLink.download = filename;
+        }
+        clipPreviewBox.classList.add("visible");
+      }
+
+      async function triggerWavDownload() {
+        if (!state.lastWavUrl || !state.lastWavBlob) return;
+        const fileName = state.lastWavName || `SG8_Voice_Delay_${Date.now()}.wav`;
+
+        try {
+          const a = document.createElement("a");
+          a.href = state.lastWavUrl;
+          a.download = fileName;
+          a.style.display = "none";
+          document.body.appendChild(a);
+          a.click();
+          setTimeout(() => {
+            if (a.parentNode) document.body.removeChild(a);
+          }, 400);
+          showToast(`WAV Saving: ${fileName}`);
+        } catch (_) {}
+
+        // Fallback for restricted WebViews/browsers where direct download is blocked
+        if (navigator.share && typeof File !== "undefined") {
+          try {
+            const wavFile = new File([state.lastWavBlob], fileName, { type: "audio/wav" });
+            if (!navigator.canShare || navigator.canShare({ files: [wavFile] })) {
+              await navigator.share({
+                title: fileName,
+                text: "SG-8 PRO Processed Audio",
+                files: [wavFile]
+              });
+              showToast("WAV Shared / Saved!");
+              return;
+            }
+          } catch (_) {}
+        }
+      }
+
+      btnRecord.addEventListener("click", async () => {
+        await ensureAudioReady();
+        if (!state.isRecording) {
+          recordedChunksL = [];
+          recordedChunksR = [];
+          state.isRecording = true;
+          state.recStartTime = Date.now();
+          btnRecord.classList.add("recording");
+          recBtnLabel.textContent = "STOP";
+          showToast("Recording stereo SG-8 output...");
+
+          state.recTimerInterval = setInterval(() => {
+            const elapsed = Math.floor((Date.now() - state.recStartTime) / 1000);
+            const mm = String(Math.floor(elapsed / 60)).padStart(2, "0");
+            const ss = String(elapsed % 60).padStart(2, "0");
+            recTimer.textContent = `${mm}:${ss}`;
+          }, 250);
+        } else {
+          state.isRecording = false;
+          clearInterval(state.recTimerInterval);
+          btnRecord.classList.remove("recording");
+          recBtnLabel.textContent = "REC";
+
+          if (recordedChunksL.length > 0) {
+            const wavBlob = encodeFloatArraysToWav(recordedChunksL, recordedChunksR, audioCtx.sampleRate);
+            setSavedWavBlob(wavBlob, `SG8_Recording_${Date.now()}.wav`);
+            showToast("Recording complete! Tap SAVE WAV to download");
+          }
+        }
+      });
+
+      btnDownloadWav.addEventListener("click", triggerWavDownload);
+      
+
+      // ------------------------------------------------------------------------
+      // 10. LED-RING ROTARY KNOBS & SVG DIAL ARCS (Touch & Mouse Drag Support)
+      // ------------------------------------------------------------------------
+      function drawKnobTicks(svgId, val = 5) {
+        const svg = $(svgId);
+        if (!svg) return;
+        const cx = 34, cy = 34, r1 = 27, r2 = 31;
+        const styles = getComputedStyle(document.documentElement);
+        const activeColor = styles.getPropertyValue("--arc-color").trim() || "#d97706";
+
+        let html = "";
+        for (let i = 0; i <= 10; i++) {
+          const deg = -135 + (i / 10) * 270;
+          const rad = (deg - 90) * (Math.PI / 180);
+          const x1 = cx + r1 * Math.cos(rad);
+          const y1 = cy + r1 * Math.sin(rad);
+          const x2 = cx + r2 * Math.cos(rad);
+          const y2 = cy + r2 * Math.sin(rad);
+          const isLit = i <= Math.round(val);
+          const stroke = isLit ? activeColor : "#94a3b8";
+          html += `<line x1="${x1.toFixed(1)}" y1="${y1.toFixed(1)}" x2="${x2.toFixed(1)}" y2="${y2.toFixed(1)}" stroke="${stroke}" stroke-width="${isLit ? 2.2 : 1.5}" stroke-linecap="round"/>`;
+        }
+        svg.innerHTML = html;
+      }
+
+      function setKnobVisual(param, val) {
+        const knobEl = $(`knob-${param}`);
+        const valEl = $(`val-${param}`);
+        const deg = -135 + (val / 10) * 270;
+        knobEl.style.transform = `rotate(${deg}deg)`;
+        valEl.textContent = val.toFixed(1);
+        drawKnobTicks(`ticks-${param}`, val);
+      }
+
+      function setupRotaryKnob(param) {
+        const knobEl = $(`knob-${param}`);
+        let startY = 0;
+        let startVal = 0;
+        let dragging = false;
+
+        const onStart = (clientY) => {
+          if (state.locked) {
+            showToast("Controls Locked! Tap Lock icon to adjust");
+            return;
+          }
+          initAudioEngine();
+          dragging = true;
+          startY = clientY;
+          startVal = state[param];
+        };
+
+        const onMove = (clientY) => {
+          if (!dragging) return;
+          const deltaY = startY - clientY;
+          const nextVal = Math.max(0, Math.min(10, startVal + deltaY * 0.06));
+          state[param] = Math.round(nextVal * 10) / 10;
+          setKnobVisual(param, state[param]);
+          updateDspParameters();
+        };
+
+        const onEnd = () => { dragging = false; };
+
+        knobEl.addEventListener("mousedown", (e) => { e.preventDefault(); onStart(e.clientY); });
+        window.addEventListener("mousemove", (e) => onMove(e.clientY));
+        window.addEventListener("mouseup", onEnd);
+
+        knobEl.addEventListener("touchstart", (e) => { e.preventDefault(); onStart(e.touches[0].clientY); }, { passive: false });
+        window.addEventListener("touchmove", (e) => { if (dragging) onMove(e.touches[0].clientY); }, { passive: true });
+        window.addEventListener("touchend", onEnd);
+
+        knobEl.addEventListener("wheel", (e) => {
+          e.preventDefault();
+          if (state.locked) return;
+          initAudioEngine();
+          const step = e.deltaY < 0 ? 0.2 : -0.2;
+          state[param] = Math.max(0, Math.min(10, Math.round((state[param] + step) * 10) / 10));
+          setKnobVisual(param, state[param]);
+          updateDspParameters();
+        }, { passive: false });
+      }
+
+      ["elevel", "fback", "dtime"].forEach(setupRotaryKnob);
+
+      // ------------------------------------------------------------------------
+      // 11. CENTER MODE SELECTOR KNOB (6 Detent Positions)
+      // ------------------------------------------------------------------------
+      const modeKnob = $("knob-mode");
+      const modeLabels = Array.from(document.querySelectorAll(".mode-label"));
+      const MODE_ANGLES = [-130, -80, -25, 28, 82, 132];
+
+      function setModeIndex(idx) {
+        state.modeIdx = (idx + 6) % 6;
+        modeKnob.style.transform = `rotate(${MODE_ANGLES[state.modeIdx]}deg)`;
+        modeLabels.forEach((lbl, i) => lbl.classList.toggle("active-mode", i === state.modeIdx));
+        updateDspParameters();
+      }
+
+      modeLabels.forEach((lbl) => {
+        lbl.addEventListener("click", () => {
+          if (state.locked) { showToast("Controls Locked"); return; }
+          initAudioEngine();
+          setModeIndex(parseInt(lbl.dataset.modeIdx, 10));
+        });
+      });
+
+      let modeDragStartY = 0;
+      let modeDragStartIdx = 0;
+      let modeDragging = false;
+
+      modeKnob.addEventListener("mousedown", (e) => {
+        if (state.locked) { showToast("Controls Locked"); return; }
+        initAudioEngine();
+        modeDragging = true;
+        modeDragStartY = e.clientY;
+        modeDragStartIdx = state.modeIdx;
+      });
+      window.addEventListener("mousemove", (e) => {
+        if (!modeDragging) return;
+        const step = Math.round((modeDragStartY - e.clientY) / 22);
+        const target = Math.max(0, Math.min(5, modeDragStartIdx + step));
+        if (target !== state.modeIdx) setModeIndex(target);
+      });
+      window.addEventListener("mouseup", () => { modeDragging = false; });
+
+      modeKnob.addEventListener("touchstart", (e) => {
+        if (state.locked) { showToast("Controls Locked"); return; }
+        initAudioEngine();
+        modeDragging = true;
+        modeDragStartY = e.touches[0].clientY;
+        modeDragStartIdx = state.modeIdx;
+      }, { passive: true });
+      window.addEventListener("touchmove", (e) => {
+        if (!modeDragging) return;
+        const step = Math.round((modeDragStartY - e.touches[0].clientY) / 22);
+        const target = Math.max(0, Math.min(5, modeDragStartIdx + step));
+        if (target !== state.modeIdx) setModeIndex(target);
+      }, { passive: true });
+      window.addEventListener("touchend", () => { modeDragging = false; });
+
+      // ------------------------------------------------------------------------
+      // 12. TAP TEMPO, HOLD FREEZE, PING-PONG, FX, BYPASS & LOCK
+      // ------------------------------------------------------------------------
+      btnTap.addEventListener("click", () => {
+        if (state.locked) { showToast("Controls Locked"); return; }
+        initAudioEngine();
+        const now = performance.now();
+        state.tapTimes = state.tapTimes.filter((t) => now - t < 3500);
+        state.tapTimes.push(now);
+
+        if (state.tapTimes.length >= 2) {
+          let sum = 0;
+          for (let i = 1; i < state.tapTimes.length; i++) {
+            sum += state.tapTimes[i] - state.tapTimes[i - 1];
+          }
+          const avgMs = Math.max(20, Math.min(3200, Math.round(sum / (state.tapTimes.length - 1))));
+          let targetMode = 2;
+          if (avgMs <= 50) targetMode = 0;
+          else if (avgMs <= 200) targetMode = 1;
+          else if (avgMs <= 800) targetMode = 2;
+          else targetMode = 3;
+
+          const m = MODES[targetMode];
+          const norm = Math.max(0, Math.min(1, (avgMs - m.minMs) / (m.maxMs - m.minMs)));
+          state.dtime = Math.round(norm * 100) / 10;
+          setKnobVisual("dtime", state.dtime);
+          setModeIndex(targetMode);
+          showToast(`Tap Tempo: ${avgMs} ms`);
+        } else {
+          showToast("Tap again to set BPM...");
+        }
+      });
+
+      btnHold.addEventListener("click", () => {
+        initAudioEngine();
+        state.holdActive = !state.holdActive;
+        btnHold.classList.toggle("hold-active", state.holdActive);
+        updateDspParameters();
+        showToast(state.holdActive ? "HOLD: Infinite Loop Freeze ON" : "HOLD Released");
+      });
+
+      btnPingPong.addEventListener("click", () => {
+        if (state.locked) { showToast("Controls Locked"); return; }
+        initAudioEngine();
+        state.pingPong = !state.pingPong;
+        pingPongPill.classList.toggle("off", !state.pingPong);
+        ppStateText.textContent = state.pingPong ? "ON" : "OFF";
+        updateDspParameters();
+        showToast(`Stereo Ping-Pong ${state.pingPong ? "ON" : "OFF"}`);
+      });
+
+      stereoPanSlider.addEventListener("input", () => {
+        if (state.locked) return;
+        initAudioEngine();
+        state.stereoPan = parseFloat(stereoPanSlider.value);
+        updateDspParameters();
+      });
+
+      btnFx.addEventListener("click", () => {
+        if (state.locked) { showToast("Controls Locked"); return; }
+        initAudioEngine();
+        state.fxActive = !state.fxActive;
+        btnFx.classList.toggle("active", state.fxActive);
+        updateDspParameters();
+        showToast(`Warmth / Shimmer FX ${state.fxActive ? "ON" : "OFF"}`);
+      });
+
+      footswitchPlate.addEventListener("click", (e) => {
+        if (e.target.closest("#btnLock")) return;
+        initAudioEngine();
+        state.bypassed = !state.bypassed;
+        checkLed.classList.toggle("active", !state.bypassed);
+        bypassStatusHint.textContent = state.bypassed
+          ? "BYPASSED (DRY) • TAP PLATE TO ENGAGE"
+          : "EFFECT ACTIVE • TAP PLATE TO BYPASS";
+        updateDspParameters();
+      });
+
+      btnLock.addEventListener("click", (e) => {
+        e.stopPropagation();
+        state.locked = !state.locked;
+        btnLock.classList.toggle("locked", state.locked);
+        lockText.textContent = state.locked ? "Locked" : "Lock";
+        showToast(state.locked ? "Knobs Locked" : "Knobs Unlocked");
+      });
+
+      // ------------------------------------------------------------------------
+      // 13. TOP TABS, PRESETS, THEMES & SETTINGS
+      // ------------------------------------------------------------------------
+      const navBtns = Array.from(document.querySelectorAll(".nav-btn"));
+      const drawers = {
+        file: $("drawerFile"),
+        presets: $("drawerPresets"),
+        theme: $("drawerTheme"),
+        settings: $("drawerSettings")
+      };
+
+      function closeAllDrawers() {
+        Object.values(drawers).forEach((d) => d.classList.remove("open"));
+      }
+
+      navBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const tab = btn.dataset.tab;
+          navBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const targetDrawer = drawers[tab];
+          const wasOpen = targetDrawer && targetDrawer.classList.contains("open");
+          closeAllDrawers();
+          if (targetDrawer && !wasOpen) {
+            targetDrawer.classList.add("open");
+          }
+        });
+      });
+
+      document.querySelectorAll(".drawer-close").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          $(btn.dataset.close).classList.remove("open");
+          navBtns.forEach((b) => b.classList.remove("active"));
+          $("tabMic").classList.add("active");
+        });
+      });
+
+      function getSavedPresets() {
+        try {
+          const raw = localStorage.getItem("sg8_user_presets");
+          return raw ? JSON.parse(raw) : [];
+        } catch (_) {
+          return [];
+        }
+      }
+
+      function applyPreset(p) {
+        initAudioEngine();
+        state.elevel = p.elevel;
+        state.fback = p.fback;
+        state.dtime = p.dtime;
+        state.pingPong = p.pp;
+        state.fxActive = p.fx;
+        state.stereoPan = p.pan;
+
+        setKnobVisual("elevel", state.elevel);
+        setKnobVisual("fback", state.fback);
+        setKnobVisual("dtime", state.dtime);
+        setModeIndex(p.mode);
+
+        pingPongPill.classList.toggle("off", !state.pingPong);
+        ppStateText.textContent = state.pingPong ? "ON" : "OFF";
+        btnFx.classList.toggle("active", state.fxActive);
+        stereoPanSlider.value = state.stereoPan;
+        updateDspParameters();
+        showToast(`Loaded Preset: ${p.name}`);
+      }
+
+      function renderPresets() {
+        const grid = $("presetGrid");
+        const all = [...FACTORY_PRESETS, ...getSavedPresets()];
+        grid.innerHTML = "";
+        all.forEach((p) => {
+          const card = document.createElement("button");
+          card.className = "preset-card";
+          card.innerHTML = `<span class="preset-name">${p.name}</span><span class="preset-desc">${p.desc || "Custom User Patch"}</span>`;
+          card.addEventListener("click", () => applyPreset(p));
+          grid.appendChild(card);
+        });
+      }
+
+      $("btnSaveCustomPreset").addEventListener("click", () => {
+        const nameInput = $("customPresetName");
+        const name = nameInput.value.trim() || `Custom #${getSavedPresets().length + 1}`;
+        const list = getSavedPresets();
+        list.push({
+          name,
+          desc: `${MODES[state.modeIdx].name} | ${state.delayMs}ms`,
+          mode: state.modeIdx,
+          elevel: state.elevel,
+          fback: state.fback,
+          dtime: state.dtime,
+          pp: state.pingPong,
+          fx: state.fxActive,
+          pan: state.stereoPan
+        });
+        try { localStorage.setItem("sg8_user_presets", JSON.stringify(list)); } catch (_) {}
+        nameInput.value = "";
+        renderPresets();
+        showToast(`Saved Preset "${name}"`);
+      });
+
+      function applyTheme(t) {
+        if (t === "pearl") document.documentElement.removeAttribute("data-theme");
+        else document.documentElement.setAttribute("data-theme", t);
+        setKnobVisual("elevel", state.elevel);
+        setKnobVisual("fback", state.fback);
+        setKnobVisual("dtime", state.dtime);
+      }
+
+      document.querySelectorAll("[data-set-theme]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const t = btn.dataset.setTheme;
+          applyTheme(t);
+          try { localStorage.setItem("sg8_theme", t); } catch (_) {}
+          showToast(`Edition: ${t.toUpperCase()}`);
+        });
+      });
+
+      $("setInputGain").addEventListener("input", (e) => {
+        state.inputGainVal = parseFloat(e.target.value);
+        $("lblInputGain").textContent = `${state.inputGainVal.toFixed(1)}x`;
+        if (inputGainNode) inputGainNode.gain.value = state.inputGainVal;
+      });
+
+      $("setMasterOut").addEventListener("input", (e) => {
+        state.masterOutVal = parseFloat(e.target.value);
+        $("lblMasterOut").textContent = `${Math.round(state.masterOutVal * 100)}%`;
+        if (masterGainNode) masterGainNode.gain.value = state.masterOutVal;
+      });
+
+      $("chkRawMic").addEventListener("change", (e) => {
+        state.rawMic = e.target.checked;
+        $("lblRawMic").textContent = state.rawMic ? "ON" : "OFF";
+        if (state.micActive) {
+          toggleLiveMic().then(() => toggleLiveMic());
+        }
+      });
+
+      // ------------------------------------------------------------------------
+      // 14. INITIALIZE UI DEFAULTS ON LOAD
+      // ------------------------------------------------------------------------
+      // 14. INITIALIZE UI DEFAULTS ON LOAD (Default: Pearl White Studio Edition)
+      // ------------------------------------------------------------------------
+      try {
+        const savedTheme = localStorage.getItem("sg8_theme");
+        if (savedTheme && savedTheme !== "pearl") {
+          document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+      } catch (_) {}
+
+      setKnobVisual("elevel", state.elevel);
+      setKnobVisual("fback", state.fback);
+      setKnobVisual("dtime", state.dtime);
+      setModeIndex(state.modeIdx);
+      renderPresets();
+    })();
+  </script>
+</body>
+</html>
